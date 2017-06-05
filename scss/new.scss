@@ -1,0 +1,144 @@
+//COLORS
+
+$color-body: #111;
+$color-purple: #4827f9;
+
+$font-heading: 'Montserrat', sans-serif;
+$font-body: 'Lora', serif;
+
+//MIXINS
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+
+/*GLOBAL STYLES*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+  background: #faf9f4;
+  color: $color-body;
+}
+
+p {
+  font-family: $font-body;
+  font-size: 17px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: $color-purple;
+}
+
+a:hover {
+  color: $color-purple;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: $font-heading;
+  font-size: 24px;
+}
+/*nav*/
+
+nav {
+  font-family: $font-heading;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 20px 40px;
+  ul {
+    float: right;
+  }
+  li {
+    margin-left: 30px;
+  }
+  a {
+    color: $color-body;
+  }
+  a:hover {
+    color: $color-purple;
+    border-bottom: 2px solid $color-purple;
+  }
+  a:visited {
+      color: $color-body;
+  }
+}
+
+#main-image {
+  padding-top: 60px;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/*Content*/
+
+.content {
+  margin: 20px;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  padding: 0 35px 0 20px;
+  ul {
+    padding-left: 0;
+  }
+  ul a {
+    color: $color-body;
+  }
+  ul a:visited {
+    color: $color-body;
+  }
+  li {
+    margin-right: 15px;
+  }
+  ul a:visited {
+    color: $color-body;
+  }
+  p:last-of-type {
+    padding-bottom: 20px;
+  }
+}
+
+
+button {
+  background-color: $color-purple;
+  margin: 20px 0;
+  padding: 20px 40px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: 0;
+  @include border-radius(3px);
+}
+
+.right {
+  float: right;
+  width: 50%;
+}
+
+.right img {
+  max-width: 19%;
+  margin: 2.5%;
+  vertical-align: middle;
+}
